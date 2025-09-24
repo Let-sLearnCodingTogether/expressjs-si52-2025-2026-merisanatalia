@@ -1,0 +1,27 @@
+{
+  "name": "expressjs-si52-2025-2026-merisanatalia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-merisanatalia.git"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-merisanatalia/issues"
+  },
+  "homepage": "https://github.com/Let-sLearnCodingTogether/expressjs-si52-2025-2026-merisanatalia#readme",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "njs": "^0.0.2",
+    "nodemon": "^3.1.10"
+  }
+}
