@@ -9,6 +9,4 @@ web.get('/', (req, res) => {
 web.get('/:username', profileController.publicProfile)
 
 
-web.get('/:profile/username', profileController.publicProfile)
-
 export default web
