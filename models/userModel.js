@@ -16,7 +16,7 @@ const UserSchema = new mongoose.Schema (
         },
         password : {
             type : String,
-            required : [true, " Passworde wajib di isi"]
+            required : [true, " Password wajib di isi"]
         }
     },
     {
@@ -24,6 +24,6 @@ const UserSchema = new mongoose.Schema (
     }
 )
 
-const UserModel = mongoose.Model("User", UserSchema)
+const UserModel = mongoose.model("User", UserSchema)
 
 export default UserModel

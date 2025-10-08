@@ -33,6 +33,6 @@ const LinkSchema = new mongoose.Schema (
     }
 )
 
-const LinkModel = mongoose.Model("Profile", LinkSchema)
+const LinkModel = mongoose.model("Profile", LinkSchema)
 
 export default LinkModel
