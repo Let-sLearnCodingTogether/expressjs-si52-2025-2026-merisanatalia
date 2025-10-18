@@ -1,0 +1,34 @@
+import passport from "passport";
+import { ExtractJwt, Strategy } from "passport-jwt";
+import UserModel from "../models/userModel.js";
+
+const opts = {
+    jwtFromRequest : ExtractJwt.fromAuthHeaderAsBearerToken(),
+    secretOrKey : "JWT_SECRET_KEY"
+}
+
+passport.use(
+    new Strategy(opts, async (payload, done) => {
+        try{
+            //melakukan query ke dalam model user berdasarkan id
+            const user = await UserModel.findById({
+                email : payload.email
+            })
+
+            // jika user tidak ditemukan
+            if(!user) {
+                return done(nulll, false)
+            }
+
+            //jika user di temukan masukkan payload berikut ini.
+            return done (null, {
+                id : user._id,
+                email : user.email,
+                usename : user.username
+            })
+
+        } catch (eror) {
+            return done (null,false)
+        }
+    })
+)

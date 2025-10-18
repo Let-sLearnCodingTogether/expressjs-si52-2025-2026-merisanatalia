@@ -4,7 +4,12 @@ import api from "./routes/api.js"
 import {database} from "./config/database.js"
 const app = express()
 
+import passport from "passport"
+import "./config/passport.js" 
+
 app.use(express.json())
+
+app.use(passport.initialize())
 
 app.use(express.static('public'))
 
